@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Firebase Login Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div id="login_div" class="main-div">
+        <center>
+            <h3>Firebase Login Page</h3>
+        </center>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+
+        <button onclick="create()">Create An Account</button>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="user_div" class="loggedin-div">
+        <center>
+            <p id="user_para">You are logged in!</p>
+            <button onclick="logout()">Logout</button>
+            <br>
+            <img id="user_img" src="logo-built_white.png" style="width: 60%;" />
+        </center>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyB95mjTwAQ_orgKfnsoVTVUlLRtaSyBUq4",
+            authDomain: "loginpage-ff59f.firebaseapp.com",
+            projectId: "loginpage-ff59f",
+            storageBucket: "loginpage-ff59f.appspot.com",
+            messagingSenderId: "483032895692",
+            appId: "1:483032895692:web:d6cd201dbdfb7640053269",
+            measurementId: "G-BTCQF5JNQS"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
